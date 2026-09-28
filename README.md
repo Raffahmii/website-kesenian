@@ -1,10 +1,3 @@
-Sip bre! 🔥 Ini **FULL README.md** versi root (path ke `kesenian/`). Tinggal copy paste ke `D:\Proggram_project\Laravel\website-kesenian\README.md`.
-
----
-
-## 📄 FILE — `D:\Proggram_project\Laravel\website-kesenian\README.md`
-
-```markdown
 <div align="center">
 
 <img src="kesenian/public/images/logo.png" alt="Giri Adiwarna" width="120" />
