@@ -976,8 +976,6 @@ SOFTWARE.
 
 🎭 **1 Suara · 1 Rasa · 1 Extra · We Are The Best Yes** 🎭
 
----
-
 <img src="kesenian/public/images/logo.png" alt="Giri Adiwarna" width="80" />
 
 </div>
