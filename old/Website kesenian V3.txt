@@ -1,0 +1,883 @@
+# Website Kesenian Giri Adiwarna SMKN 1 Banjar
+
+## Final Project Documentation
+
+Versi : 3.0
+
+Developer : My MainAccount
+
+Framework : Laravel 12
+
+Database : PostgreSQL
+
+Frontend : Blade + Tailwind CSS + Alpine.js
+
+---
+
+# 1. Deskripsi Project
+
+Website Kesenian Giri Adiwarna merupakan website resmi organisasi Kesenian Giri Adiwarna SMKN 1 Banjar.
+
+Website ini dibuat untuk menggantikan sistem administrasi manual menjadi sistem digital sehingga seluruh kegiatan organisasi dapat dikelola secara lebih rapi, aman, cepat, dan profesional.
+
+Website ini bukan hanya sebagai media informasi, tetapi juga sebagai sistem informasi organisasi yang dapat digunakan langsung oleh pengurus maupun anggota.
+
+---
+
+# 2. Tujuan Project
+
+Website dibuat untuk:
+
+- Menjadi identitas resmi organisasi
+- Menampilkan informasi terbaru
+- Menyimpan sejarah organisasi
+- Menyimpan sejarah kepengurusan
+- Menampilkan dokumentasi kegiatan
+- Mengelola absensi digital
+- Mengelola kas anggota
+- Mengelola data anggota
+- Mengelola pengumuman
+- Mengelola event
+- Menampilkan prestasi organisasi
+- Menyimpan seluruh aktivitas penting melalui Audit Log
+- Mempermudah pembuatan laporan
+
+---
+
+# 3. Konsep Website
+
+Website memiliki dua fungsi utama.
+
+## A. Website Informasi
+
+Digunakan oleh masyarakat umum dan anggota.
+
+Berisi:
+
+- Landing Page
+- Tentang Kami
+- Visi Misi
+- Sejarah
+- Prestasi
+- Dokumentasi
+- Kontak
+- Pengumuman
+- Agenda Kegiatan
+
+---
+
+## B. Website Administrasi
+
+Digunakan oleh pengurus.
+
+Berfungsi untuk:
+
+- Mengelola anggota
+- Mengelola kepengurusan
+- Mengelola absensi
+- Mengelola kas
+- Mengelola dokumentasi
+- Mengelola event
+- Mengelola pengumuman
+- Export laporan
+- Audit aktivitas
+
+---
+
+# 4. Konsep Desain
+
+Website menggunakan konsep warna resmi organisasi.
+
+## Warna
+
+Background
+
+#1E2328
+
+Background Secondary
+
+#2A2E34
+
+Card
+
+#3B3F46
+
+Primary
+
+#F5B301
+
+Hover
+
+#FEB053
+
+Text
+
+#FFFFFF
+
+---
+
+## Konsep UI
+
+Modern
+
+Elegan
+
+Minimalis
+
+Premium
+
+Professional
+
+Responsive
+
+Dark Theme
+
+Tidak terlalu ramai
+
+Animasi halus
+
+Mudah digunakan
+
+---
+
+# 5. Landing Page
+
+Landing Page menjadi identitas organisasi.
+
+## Hero Section
+
+Logo Organisasi
+
+Nama Organisasi
+
+Slogan
+
+Button Login
+
+Button Dokumentasi
+
+Button Tentang Kami
+
+Background Video atau Image
+
+Animasi ringan
+
+---
+
+## Tentang Kami
+
+Menjelaskan sejarah singkat organisasi.
+
+---
+
+## Visi Misi
+
+Menampilkan visi organisasi.
+
+Menampilkan misi organisasi.
+
+---
+
+## Prestasi
+
+Daftar prestasi.
+
+Foto.
+
+Tahun.
+
+Kategori.
+
+---
+
+## Dokumentasi
+
+Preview dokumentasi terbaru.
+
+---
+
+## Sejarah Kepengurusan
+
+Timeline tiap periode.
+
+---
+
+## Agenda
+
+Kalender kegiatan.
+
+---
+
+## Kontak
+
+Email
+
+WhatsApp
+
+Instagram
+
+Lokasi
+
+Google Maps
+
+---
+
+## Footer
+
+Copyright
+
+Developer
+
+Media Sosial
+
+---
+
+# 6. Dashboard
+
+Dashboard akan berbeda sesuai Role.
+
+Contoh
+
+Anggota hanya melihat menu yang diperlukan.
+
+Sedangkan Ketua melihat seluruh menu.
+
+Dashboard menggunakan Sidebar.
+
+---
+
+# 7. Role User
+
+## 1. Anggota
+
+Hak Akses
+
+- Login
+- Register
+- Edit Profil
+- Ganti Password
+- Melihat Pengumuman
+- Melihat Dokumentasi
+- Melihat Prestasi
+- Melihat Jadwal
+- Melihat Absensi Sendiri
+- Melihat Kas Sendiri
+
+---
+
+## 2. PDD
+
+Hak Akses
+
+- Upload Foto
+- Upload Video
+- Membuat Album
+- Menghapus Dokumentasi
+- Mengedit Dokumentasi
+
+---
+
+## 3. Bendahara
+
+Hak Akses
+
+- Input Kas
+- Edit Kas
+- Hapus Kas
+- Export Excel
+- Export PDF
+- Reminder Pembayaran
+- Rekap Pembayaran
+
+---
+
+## 4. Sekretaris
+
+Hak Akses
+
+- Kelola Anggota
+- Approve Registrasi
+- Kelola Absensi
+- QR Attendance
+- Naik Kelas Massal
+- Rekap Absensi
+
+---
+
+## 5. Ketua
+
+Hak Akses
+
+Semua fitur website.
+
+---
+
+## 6. Wakil Ketua
+
+Hak Akses
+
+Semua fitur website.
+
+---
+
+## 7. Pembina
+
+Hak Akses
+
+Full Access.
+
+---
+
+# 8. Fitur Website
+
+## Informasi
+
+- Profil
+- Tentang Kami
+- Visi Misi
+- Prestasi
+- Pengumuman
+- Dokumentasi
+- Event
+- Kalender
+
+---
+
+## Dokumentasi
+
+- Album
+- Foto
+- Video
+- Caption
+- Filter Tahun
+- Filter Event
+
+---
+
+## Event
+
+- Tambah
+- Edit
+- Hapus
+- Jadwal
+- Lokasi
+
+---
+
+## Kepengurusan
+
+- Periode
+- Ketua
+- Wakil
+- Bendahara
+- Sekretaris
+- PDD
+
+---
+
+## Absensi
+
+Manual
+
+QR Code
+
+Status
+
+- Hadir
+- Izin
+- Sakit
+- Alfa
+
+Indikator
+
+Hijau
+
+Kuning
+
+Merah
+
+---
+
+## Kas
+
+Nominal
+
+Status
+
+Sudah Bayar
+
+Belum Bayar
+
+Telat
+
+Export Excel
+
+Export PDF
+
+---
+
+## Pengumuman
+
+Tambah
+
+Edit
+
+Delete
+
+Pinned
+
+---
+
+## Registrasi
+
+Register
+
+Approval
+
+Aktivasi
+
+---
+
+## Audit Log
+
+Mencatat seluruh aktivitas user.
+
+---
+
+# 9. Teknologi
+
+## Backend
+
+Laravel 12
+
+PHP 8.4
+
+---
+
+## Frontend
+
+Blade
+
+Tailwind CSS
+
+Alpine.js
+
+---
+
+## Database
+
+PostgreSQL
+
+---
+
+## Version Control
+
+Git
+
+GitHub
+
+---
+
+## Editor
+
+Visual Studio Code
+
+---
+
+# 10. Package Laravel
+
+## Laravel Breeze
+
+Digunakan untuk
+
+- Login
+- Register
+- Forgot Password
+- Reset Password
+- Email Verification
+- Authentication
+
+---
+
+## Tailwind CSS
+
+Digunakan untuk styling website.
+
+---
+
+## Alpine.js
+
+Digunakan untuk:
+
+- Modal
+- Dropdown
+- Sidebar
+- Toggle
+- Accordion
+- Tab
+- Interaksi ringan
+
+---
+
+## Flowbite
+
+Komponen UI.
+
+Seperti:
+
+Button
+
+Modal
+
+Card
+
+Navbar
+
+Sidebar
+
+Table
+
+Form
+
+Alert
+
+---
+
+## SweetAlert2
+
+Popup modern.
+
+Digunakan untuk:
+
+Success
+
+Delete
+
+Error
+
+Warning
+
+Confirmation
+
+---
+
+## AOS
+
+Animation On Scroll.
+
+Digunakan pada Landing Page.
+
+---
+
+## Chart.js
+
+Menampilkan grafik.
+
+Contoh:
+
+Grafik Kas
+
+Grafik Kehadiran
+
+Grafik Anggota
+
+---
+
+## Laravel Excel
+
+Export Excel.
+
+Digunakan Bendahara.
+
+---
+
+## Laravel DomPDF
+
+Export PDF.
+
+Digunakan:
+
+Absensi
+
+Kas
+
+Data Anggota
+
+---
+
+## Spatie Laravel Permission
+
+Mengatur Role.
+
+Contoh:
+
+Ketua
+
+Sekretaris
+
+Bendahara
+
+PDD
+
+Pembina
+
+Anggota
+
+---
+
+## Simple QRCode
+
+Membuat QR Code Absensi.
+
+---
+
+## Intervention Image
+
+Mengelola gambar.
+
+Resize.
+
+Compress.
+
+Crop.
+
+---
+
+# 11. Database
+
+Database menggunakan PostgreSQL.
+
+Nama Database
+
+website_kesenian
+
+Semua data organisasi tersimpan dalam PostgreSQL.
+
+---
+
+# 12. Struktur Folder
+
+website-kesenian/
+
+│
+
+├── app/
+
+├── bootstrap/
+
+├── config/
+
+├── database/
+
+├── public/
+
+├── resources/
+
+│ ├── css/
+
+│ ├── js/
+
+│ └── views/
+
+│ ├── landing/
+
+│ ├── auth/
+
+│ ├── dashboard/
+
+│ ├── anggota/
+
+│ ├── bendahara/
+
+│ ├── sekretaris/
+
+│ ├── pdd/
+
+│ ├── ketua/
+
+│ ├── pembina/
+
+│ ├── layouts/
+
+│ ├── components/
+
+│ └── errors/
+
+├── routes/
+
+├── storage/
+
+├── tests/
+
+└── vendor/
+
+---
+
+# 13. Struktur Dashboard
+
+Dashboard
+
+│
+
+├── Home
+
+├── Pengumuman
+
+├── Dokumentasi
+
+├── Prestasi
+
+├── Event
+
+├── Kepengurusan
+
+├── Anggota
+
+├── Absensi
+
+├── Kas
+
+├── Audit Log
+
+├── Pengaturan
+
+└── Profile
+
+---
+
+# 14. Profile User
+
+Setiap user memiliki halaman Profile.
+
+Fitur
+
+- Upload Foto Profil
+- Edit Nama
+- Edit Username
+- Edit Email
+- Edit Nomor HP
+- Edit Password
+- Ganti Foto
+- Hapus Foto
+- Update Data
+- Logout
+
+Keamanan
+
+- Password menggunakan Hash Laravel.
+- Email harus unik.
+- Username harus unik.
+- Validasi form.
+- Konfirmasi password sebelum mengganti password.
+- Session Login aman.
+
+---
+
+# 15. Alur Website
+
+Pengunjung membuka Landing Page
+
+↓
+
+Register menjadi anggota
+
+↓
+
+Status Pending
+
+↓
+
+Disetujui Sekretaris
+
+↓
+
+Login
+
+↓
+
+Masuk Dashboard
+
+↓
+
+Menggunakan fitur sesuai Role
+
+↓
+
+Data tersimpan ke PostgreSQL
+
+↓
+
+Ketua dan Pembina dapat memonitor seluruh aktivitas melalui Dashboard dan Audit Log
+
+---
+
+# 16. Alasan Memilih Laravel Blade
+
+Project ini menggunakan Laravel Blade karena:
+
+- Lebih mudah dipelajari
+- Hanya menggunakan satu project
+- Tidak perlu membuat API terpisah
+- Tidak perlu React atau Next.js
+- Development lebih cepat
+- Mudah dipelihara
+- Hosting lebih murah
+- Sangat cocok untuk organisasi sekolah
+- Tetap terlihat profesional
+- Sangat cocok dijadikan Portfolio
+
+---
+
+# 17. Target Project
+
+Target akhir project ini adalah membangun sistem informasi organisasi kesenian yang benar-benar dapat digunakan oleh Kesenian Giri Adiwarna SMKN 1 Banjar.
+
+Website ini diharapkan mampu menggantikan proses administrasi manual menjadi digital sehingga organisasi menjadi lebih modern, efisien, dan profesional.
+
+Selain digunakan oleh organisasi, project ini juga akan menjadi portfolio utama developer pada GitHub, LinkedIn, Portfolio Website, PKL, maupun proses melamar pekerjaan di bidang Web Development dan Software Engineering.
+
+app/
+│
+├── Http/
+│   ├── Controllers/
+│   │
+│   ├── Landing/
+│   ├── Dashboard/
+│   ├── Profile/
+│   ├── User/
+│   ├── Position/
+│   ├── Event/
+│   ├── Documentation/
+│   ├── Attendance/
+│   ├── Cash/
+│   ├── Announcement/
+│   ├── Achievement/
+│   ├── AuditLog/
+│   └── Setting/
+│
+├── Models/
+│
+├── Services/
+│
+├── Repositories/
+│
+└── Helpers/
+
+
+resources/views/
+
+├── layouts/
+├── components/
+├── landing/
+├── dashboard/
+├── profile/
+├── users/
+├── positions/
+├── events/
+├── documentations/
+├── attendance/
+├── cash/
+├── announcements/
+├── achievements/
+├── settings/
+└── auth/

@@ -1,0 +1,541 @@
+/* ═══════════════════════════════════════
+   IMPORT FONTS (Inter + Poppins)
+   ═══════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════ */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        @apply bg-bg-primary text-text-primary font-sans;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-display;
+    }
+
+    /* Custom scrollbar (dark theme) */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-bg-secondary;
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-border-dark rounded-full;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gold;
+    }
+
+    /* Selection color */
+    ::selection {
+        @apply bg-gold text-bg-primary;
+    }
+}
+
+/* ═══════════════════════════════════════
+   COMPONENTS
+   ═══════════════════════════════════════ */
+@layer components {
+    /* ── BUTTONS ────────────────────────── */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium
+               transition-all duration-200 ease-out;
+    }
+
+    .btn-gold {
+        @apply btn bg-gold text-bg-primary hover:bg-gold-hover
+               shadow-lg shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-0.5;
+    }
+
+    .btn-outline {
+        @apply btn border-2 border-gold text-gold
+               hover:bg-gold hover:text-bg-primary hover:-translate-y-0.5;
+    }
+
+    .btn-ghost {
+        @apply btn text-text-primary hover:bg-bg-card;
+    }
+
+    .btn-sm {
+        @apply px-4 py-2 text-sm;
+    }
+
+    .btn-lg {
+        @apply px-8 py-4 text-lg;
+    }
+
+    /* ── CARDS ──────────────────────────── */
+    .card {
+        @apply bg-bg-card rounded-xl p-6 border border-border-dark
+               transition-all duration-300;
+    }
+
+    .card-hover {
+        @apply card hover:border-gold/50 hover:-translate-y-1
+               hover:shadow-xl hover:shadow-gold/10;
+    }
+
+    /* ── SECTION ────────────────────────── */
+    .section {
+        @apply py-16 md:py-24;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl lg:text-5xl font-bold font-display
+               text-text-primary mb-4;
+    }
+
+    .section-subtitle {
+        @apply text-text-muted text-lg max-w-2xl mx-auto;
+    }
+
+    /* ── GOLD ACCENT ───────────────────── */
+    .gold-text {
+        @apply text-gold;
+    }
+
+    .gold-underline {
+        @apply relative inline-block;
+    }
+    .gold-underline::after {
+        content: '';
+        @apply absolute left-0 -bottom-2 w-16 h-1 bg-gold rounded-full;
+    }
+
+    /* ── BADGE ─────────────────────────── */
+    .badge {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    }
+
+    .badge-gold {
+        @apply badge bg-gold/20 text-gold border border-gold/30;
+    }
+
+    .badge-success {
+        @apply badge bg-green-500/20 text-green-400 border border-green-500/30;
+    }
+
+    .badge-danger {
+        @apply badge bg-red-500/20 text-red-400 border border-red-500/30;
+    }
+}
+
+/* ═══════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════ */
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .gradient-gold {
+        background: linear-gradient(135deg, #F5B301 0%, #FEB053 100%);
+    }
+
+    .glass {
+        background: rgba(42, 46, 52, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+}
+
+/* ═══════════════════════════════════════
+   CUSTOM ANIMATIONS
+   ═══════════════════════════════════════ */
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(245, 179, 1, 0.3); }
+    50%      { box-shadow: 0 0 40px rgba(245, 179, 1, 0.6); }
+}
+
+.animate-glow {
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* Smooth scroll untuk anchor link */
+html {
+    scroll-padding-top: 100px;
+}
+
+/* ═══════════════════════════════════════
+   FLOATING ANIMATION — buat wayang
+   ═══════════════════════════════════════ */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-20px); }
+}
+
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Smooth anchor scroll dengan offset navbar */
+html {
+    scroll-padding-top: 100px;
+}
+
+/* ═══════════════════════════════════════
+   ANIMATED HERO BACKGROUND
+   ═══════════════════════════════════════ */
+@keyframes hero-bg-zoom {
+    0%   { transform: scale(1) translate(0, 0); }
+    50%  { transform: scale(1.08) translate(-1%, -1%); }
+    100% { transform: scale(1) translate(0, 0); }
+}
+
+.animate-hero-bg {
+    animation: hero-bg-zoom 8s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* ═══════════════════════════════════════
+   ANCHOR OFFSET — biar gak ketutup navbar
+   ═══════════════════════════════════════ */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+    section[id] {
+        scroll-margin-top: 96px;
+    }
+}
+
+/* ═══════════════════════════════════════
+   SOFT PANEL SYSTEM — buat dashboard
+   Menggantikan "card border" jadi "panel gradient + shadow"
+   ═══════════════════════════════════════ */
+@layer components {
+    /* ── SOFT CARD — tanpa border, pakai gradient + shadow ── */
+    .panel {
+        @apply relative rounded-2xl p-5 sm:p-6
+               bg-gradient-to-br from-bg-card/80 via-bg-card/60 to-bg-card/30
+               shadow-lg shadow-black/20
+               transition-all duration-300;
+    }
+
+    .panel:hover {
+        @apply shadow-xl shadow-black/30;
+    }
+
+    .panel-interactive {
+        @apply panel hover:-translate-y-1 hover:shadow-2xl hover:shadow-gold/10;
+    }
+
+    /* ── SOFT PANEL dengan aksen gold subtle ── */
+    .panel-gold {
+        @apply relative rounded-2xl p-5 sm:p-6 overflow-hidden
+               bg-gradient-to-br from-bg-card/90 via-bg-card/60 to-gold/5
+               shadow-lg shadow-black/20
+               transition-all duration-300;
+    }
+
+    .panel-gold::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(245,179,1,0.12) 0%, transparent 70%);
+        filter: blur(40px);
+        pointer-events: none;
+    }
+
+        /* ── LIGHT PANEL — card terang ── */
+    .panel-light {
+        @apply relative rounded-2xl p-5 sm:p-6
+               bg-light-card
+               shadow-sm shadow-black/[0.03]
+               border border-light-border
+               transition-all duration-300;
+    }
+
+    .panel-light:hover {
+        @apply shadow-md shadow-black/[0.06];
+    }
+
+    .panel-light-interactive {
+        @apply panel-light 
+               hover:-translate-y-0.5 
+               hover:shadow-lg hover:shadow-black/[0.08]
+               hover:border-gold/40;
+    }
+
+    /* ── LIGHT PANEL dengan aksen gold subtle ── */
+    .panel-light-gold {
+        @apply relative rounded-2xl p-5 sm:p-6 overflow-hidden
+               bg-gradient-to-br from-white via-white to-gold/[0.04]
+               shadow-sm shadow-black/[0.03]
+               border border-light-border
+               transition-all duration-300;
+    }
+
+    .panel-light-gold::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(245,179,1,0.08) 0%, transparent 70%);
+        filter: blur(40px);
+        pointer-events: none;
+    }
+
+    /* ── LIGHT ICON BADGE ── */
+    .icon-badge-light {
+        @apply w-11 h-11 rounded-2xl flex items-center justify-center shrink-0
+               bg-gold/10
+               text-gold-dark
+               transition-all duration-300;
+    }
+
+    .icon-badge-light-solid {
+        @apply w-11 h-11 rounded-2xl flex items-center justify-center shrink-0
+               gradient-gold
+               text-bg-primary
+               shadow-md shadow-gold/20
+               transition-all duration-300;
+    }
+
+    /* ── LIGHT SECTION HEAD ── */
+    .section-head-light {
+        @apply flex items-center gap-3 mb-6;
+    }
+
+    .section-head-title-light {
+        @apply font-display font-bold text-lg text-light-text;
+    }
+
+    .section-head-sub-light {
+        @apply text-xs text-light-muted;
+    }
+
+    /* ── LIGHT DIVIDER ── */
+    .divider-light {
+        height: 1px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(229,231,235,0.8) 20%, 
+            rgba(229,231,235,0.8) 80%, 
+            transparent 100%
+        );
+    }
+}
+
+@layer utilities {
+    /* Background untuk main content area */
+    .bg-content {
+        background: 
+            radial-gradient(circle at 100% 0%, rgba(245,179,1,0.03) 0%, transparent 50%),
+            #F5F7FA;
+    }
+
+    /* ── ICON BADGE — circle gradient, tanpa border keras ── */
+    .icon-badge {
+        @apply w-11 h-11 rounded-2xl flex items-center justify-center shrink-0
+               bg-gradient-to-br from-gold/20 to-gold/5
+               text-gold
+               shadow-md shadow-gold/10
+               transition-all duration-300;
+    }
+
+    .icon-badge-solid {
+        @apply w-11 h-11 rounded-2xl flex items-center justify-center shrink-0
+               gradient-gold
+               text-bg-primary
+               shadow-lg shadow-gold/30
+               transition-all duration-300;
+    }
+
+    /* ── SECTION HEADER — tanpa garis keras ── */
+    .section-head {
+        @apply flex items-center gap-3 mb-6;
+    }
+
+    .section-head-title {
+        @apply font-display font-bold text-lg text-text-primary;
+    }
+
+    .section-head-sub {
+        @apply text-xs text-text-muted;
+    }
+
+    /* ── MENU ACTIVE STATE — gradient bukan flat ── */
+    .menu-active {
+        @apply relative
+               bg-gradient-to-r from-gold/20 via-gold/10 to-transparent
+               text-gold;
+    }
+}
+
+@layer utilities {
+    /* Soft divider — gradient, bukan border */
+    .divider-soft {
+        height: 1px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(74,79,87,0.5) 20%, 
+            rgba(74,79,87,0.5) 80%, 
+            transparent 100%
+        );
+    }
+
+    /* Background gradient untuk main content */
+    .bg-main {
+        background: 
+            radial-gradient(circle at 100% 0%, rgba(245,179,1,0.03) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, rgba(245,179,1,0.02) 0%, transparent 50%),
+            linear-gradient(180deg, #1E2328 0%, #1E2328 100%);
+    }
+}
+/* ═══════════════════════════════════════
+   BATIK PATTERN — Background overlay
+   ═══════════════════════════════════════ */
+.bg-batik {
+    position: relative;
+    isolation: isolate;
+}
+
+.bg-batik::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/batik.jpeg');
+    background-size: 380px;
+    background-repeat: repeat;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-batik > * {
+    position: relative;
+    z-index: 1;
+}
+/* ═══════════════════════════════════════
+   LOADING SCREEN
+   ═══════════════════════════════════════ */
+@keyframes loading-bar {
+    0%   { width: 0%; }
+    100% { width: 100%; }
+}
+
+.animate-loading-bar {
+    animation: loading-bar 5s ease-out forwards;
+}
+
+@keyframes spin-slow {
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 2s linear infinite;
+}
+
+.animate-spin-reverse {
+    animation: spin-slow 1.5s linear infinite reverse;
+}
+/* ═══════════════════════════════════════
+   ANIMASI TAMBAHAN
+   ═══════════════════════════════════════ */
+
+/* Draw line animation (SVG underline) */
+@keyframes draw-line {
+    to { stroke-dashoffset: 0; }
+}
+
+.animate-draw-line {
+    animation: draw-line 1.5s ease-out 0.5s forwards;
+}
+
+/* Shimmer untuk loading / skeleton */
+@keyframes shimmer {
+    0%   { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.animate-shimmer {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245,179,1,0.1) 50%, 
+        transparent 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+/* Fade in up (untuk card list) */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out both;
+}
+
+/* Pulse glow untuk badge */
+@keyframes pulse-glow {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(245,179,1,0.4),
+                    0 0 0 0 rgba(245,179,1,0.3);
+    }
+    50% { 
+        box-shadow: 0 0 0 10px rgba(245,179,1,0),
+                    0 0 0 20px rgba(245,179,1,0);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Spin slow (udah ada di step sebelumnya) */
+@keyframes spin-slow {
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 2s linear infinite; }
+.animate-spin-reverse { animation: spin-slow 1.5s linear infinite reverse; }
+
+/* Float slow (udah ada) */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-20px); }
+}
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+
+/* Scale in (untuk card fokus) */
+@keyframes scale-in {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+.animate-scale-in { animation: scale-in 0.4s ease-out both; }
+
+/* Bounce smooth (untuk scroll indicator) */
+@keyframes bounce-smooth {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+.animate-bounce-smooth { animation: bounce-smooth 2s ease-in-out infinite; }

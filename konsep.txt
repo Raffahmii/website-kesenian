@@ -1,0 +1,508 @@
+WKWKWK siap bre 🤣
+
+Gua gas, tapi tetap ada batas karakter ChatGPT. Jadi gua bikin **versi padat tapi lengkap** yang bisa langsung lu copy paste ke README. Kalau masih kurang nanti tinggal kita lanjut Part 2.
+
+---
+
+# WEBSITE KESENIAN GIRI ADIWARNA SMKN 1 BANJAR
+
+## Final Project Documentation
+
+Version : 3.0
+
+Developer : Razeen (My MainAccount)
+
+Framework : Laravel 12
+
+Language : PHP 8.4
+
+Database : PostgreSQL
+
+Frontend : Blade + Tailwind CSS + Alpine.js
+
+Authentication : Laravel Breeze
+
+Role & Permission : Spatie Laravel Permission
+
+---
+
+# 1. Deskripsi Project
+
+Website Kesenian Giri Adiwarna merupakan website resmi organisasi Kesenian Giri Adiwarna SMKN 1 Banjar yang dibangun untuk menggantikan sistem administrasi manual menjadi sistem digital.
+
+Website ini tidak hanya berfungsi sebagai media informasi kepada masyarakat, tetapi juga sebagai sistem informasi organisasi yang dapat membantu seluruh pengurus menjalankan tugasnya dengan lebih efektif, cepat, aman, dan profesional.
+
+Melalui website ini seluruh data anggota, kepengurusan, absensi, kas, dokumentasi, prestasi, pengumuman, dan kegiatan organisasi dapat tersimpan dalam satu database sehingga lebih mudah dikelola dibandingkan menggunakan buku tulis ataupun file yang terpisah-pisah.
+
+Website ini dirancang sebagai project portfolio sekaligus aplikasi yang benar-benar dapat digunakan oleh Kesenian Giri Adiwarna.
+
+---
+
+# 2. Tujuan Website
+
+Tujuan utama pembangunan website ini adalah:
+
+* Menjadi website resmi organisasi.
+* Mempermudah penyebaran informasi.
+* Menjadi pusat dokumentasi kegiatan.
+* Menyimpan sejarah kepengurusan setiap periode.
+* Mengelola data anggota.
+* Mengelola absensi digital.
+* Mengelola pembayaran kas anggota.
+* Mengelola pengumuman organisasi.
+* Mengelola event dan latihan.
+* Menampilkan prestasi organisasi.
+* Mempermudah pembuatan laporan.
+* Meningkatkan profesionalisme organisasi.
+
+---
+
+# 3. Konsep Website
+
+Website memiliki dua fungsi utama.
+
+## A. Website Publik
+
+Website publik dapat diakses oleh seluruh pengunjung tanpa login.
+
+Halaman yang tersedia antara lain:
+
+* Landing Page
+* Tentang Kami
+* Visi Misi
+* Sejarah Organisasi
+* Struktur Organisasi
+* Dokumentasi
+* Prestasi
+* Event
+* Pengumuman
+* Kontak
+* Login
+
+Tujuannya agar masyarakat maupun calon anggota dapat mengenal organisasi dengan lebih baik.
+
+---
+
+## B. Website Internal
+
+Website internal hanya dapat diakses setelah login.
+
+Website ini digunakan oleh seluruh anggota dan pengurus sesuai hak akses masing-masing.
+
+Fitur yang tersedia antara lain:
+
+* Dashboard
+* Data Anggota
+* Data Kepengurusan
+* Dokumentasi
+* Absensi
+* Kas
+* Pengumuman
+* Event
+* Prestasi
+* Audit Log
+* Pengaturan
+
+---
+
+# 4. Konsep Desain
+
+Website menggunakan konsep Modern Organization Website.
+
+Warna utama menyesuaikan identitas organisasi.
+
+## Color Palette
+
+Primary Background
+
+#1E2328
+
+Secondary Background
+
+#2A2E34
+
+Card
+
+#3B3F46
+
+Primary Color
+
+#F5B301
+
+Hover
+
+#FEB053
+
+Text
+
+#FFFFFF
+
+Konsep desain yang digunakan:
+
+* Modern
+* Elegant
+* Premium
+* Responsive
+* Minimalis
+* Professional
+* Dark Theme
+* Clean Design
+* Smooth Animation
+
+---
+
+# 5. Landing Page
+
+Landing Page merupakan halaman pertama yang akan dilihat pengunjung.
+
+Landing Page dibuat semenarik mungkin agar memberikan kesan profesional.
+
+Landing Page terdiri dari beberapa section.
+
+## Hero Section
+
+Menampilkan logo organisasi.
+
+Nama organisasi.
+
+Slogan.
+
+Button Login.
+
+Button Dokumentasi.
+
+Button Tentang Kami.
+
+Background Image.
+
+Animasi ringan menggunakan AOS.
+
+---
+
+## Tentang Kami
+
+Menjelaskan sejarah singkat organisasi.
+
+Menjelaskan tujuan organisasi.
+
+Menampilkan foto kegiatan.
+
+---
+
+## Visi dan Misi
+
+Menampilkan visi organisasi.
+
+Menampilkan misi organisasi.
+
+---
+
+## Prestasi
+
+Menampilkan prestasi organisasi.
+
+Foto.
+
+Nama lomba.
+
+Kategori.
+
+Tahun.
+
+---
+
+## Dokumentasi
+
+Menampilkan dokumentasi terbaru.
+
+Album.
+
+Foto.
+
+Video.
+
+---
+
+## Timeline Kepengurusan
+
+Menampilkan sejarah kepengurusan berdasarkan periode.
+
+---
+
+## Event
+
+Menampilkan kalender kegiatan.
+
+Latihan.
+
+Pentas.
+
+Lomba.
+
+Rapat.
+
+---
+
+## Kontak
+
+Email.
+
+WhatsApp.
+
+Instagram.
+
+Lokasi.
+
+Google Maps.
+
+---
+
+## Footer
+
+Copyright.
+
+Developer.
+
+Media Sosial.
+
+Kontak.
+
+---
+
+# 6. Dashboard
+
+Dashboard merupakan halaman utama setelah user login.
+
+Dashboard dibuat berbeda sesuai Role.
+
+Dashboard menggunakan Sidebar agar mudah digunakan.
+
+Dashboard menampilkan informasi singkat seperti:
+
+Jumlah anggota.
+
+Jumlah dokumentasi.
+
+Jumlah event.
+
+Kas bulan ini.
+
+Absensi hari ini.
+
+Pengumuman terbaru.
+
+Grafik anggota.
+
+Grafik kas.
+
+Grafik kehadiran.
+
+---
+
+# 7. User Role
+
+Website memiliki tujuh role utama.
+
+## Anggota
+
+Dapat melihat informasi.
+
+Melihat dokumentasi.
+
+Melihat jadwal.
+
+Melihat absensi pribadi.
+
+Melihat kas pribadi.
+
+Mengubah profile.
+
+Mengubah password.
+
+---
+
+## PDD
+
+Mengelola dokumentasi.
+
+Upload foto.
+
+Upload video.
+
+Membuat album.
+
+Menghapus dokumentasi.
+
+Mengedit dokumentasi.
+
+---
+
+## Bendahara
+
+Mengelola kas.
+
+Input pembayaran.
+
+Edit pembayaran.
+
+Export PDF.
+
+Export Excel.
+
+Reminder pembayaran.
+
+Laporan kas.
+
+---
+
+## Sekretaris
+
+Mengelola anggota.
+
+Approve registrasi.
+
+Mengelola absensi.
+
+QR Attendance.
+
+Naik kelas massal.
+
+Rekap absensi.
+
+---
+
+## Ketua
+
+Memiliki seluruh hak akses website.
+
+Melihat laporan.
+
+Melihat Audit Log.
+
+Monitoring seluruh aktivitas.
+
+---
+
+## Wakil Ketua
+
+Hak akses sama dengan Ketua.
+
+---
+
+## Pembina
+
+Hak akses penuh.
+
+Mengawasi seluruh aktivitas organisasi.
+
+---
+
+# 8. Teknologi
+
+Framework
+
+Laravel 12
+
+Backend Language
+
+PHP 8.4
+
+Database
+
+PostgreSQL
+
+Frontend
+
+Blade
+
+Tailwind CSS
+
+Alpine.js
+
+Authentication
+
+Laravel Breeze
+
+Role
+
+Spatie Laravel Permission
+
+Animation
+
+AOS
+
+Popup
+
+SweetAlert2
+
+Chart
+
+Chart.js
+
+Export Excel
+
+Laravel Excel
+
+Export PDF
+
+DomPDF
+
+QR Code
+
+Simple QRCode
+
+Upload Image
+
+Intervention Image
+
+Component UI
+
+Flowbite
+
+Version Control
+
+Git
+
+GitHub
+
+IDE
+
+Visual Studio Code
+
+---
+
+# 9. Kenapa Memilih Laravel Blade
+
+Project ini menggunakan Laravel Blade karena lebih sederhana dibandingkan memisahkan frontend dan backend.
+
+Dengan Blade seluruh halaman website dapat dibuat langsung menggunakan Laravel sehingga proses development menjadi lebih cepat dan lebih mudah dipelajari.
+
+Laravel Blade juga memiliki performa yang baik, mudah dipelihara, biaya hosting lebih murah, serta sangat cocok digunakan untuk project organisasi sekolah.
+
+Blade tetap mampu menghasilkan tampilan modern dengan bantuan Tailwind CSS dan Alpine.js tanpa harus menggunakan React atau Next.js.
+
+---
+
+# 10. Target Project
+
+Website ini ditargetkan menjadi sistem informasi resmi Kesenian Giri Adiwarna SMKN 1 Banjar.
+
+Selain digunakan langsung oleh organisasi, website ini juga akan dijadikan portfolio utama developer untuk GitHub, LinkedIn, CV, PKL, maupun melamar pekerjaan di bidang Web Development.
+
+Project ini diharapkan mampu menunjukkan kemampuan dalam membangun aplikasi Full Stack menggunakan Laravel, PostgreSQL, Blade, Tailwind CSS, dan Alpine.js dengan konsep yang modern, rapi, dan profesional.
+
+---
+
+## Menurut gua ada satu perubahan yang bakal bikin project ini naik kelas.
+
+**Jangan lagi sebut ini "Website Kesenian".**
+
+Di README dan GitHub, kasih nama yang lebih profesional, misalnya:
+
+> **Giri Adiwarna Management Information System (GAMIS)**
+
+atau
+
+> **Giri Adiwarna Information System (GAIS)**
+
+Karena recruiter atau orang yang lihat GitHub bakal langsung melihat ini sebagai **sistem informasi organisasi**, bukan sekadar website ekstrakurikuler. Nama yang profesional + fitur yang lengkap akan membuat portfolio lu terlihat jauh lebih kuat. 💪🔥
